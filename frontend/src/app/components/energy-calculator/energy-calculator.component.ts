@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { EnergyCalculatorService } from '../../services/energy-calculator.service';
 
 @Component({
   selector: 'app-energy-calculator',
@@ -11,17 +12,17 @@ export class EnergyCalculatorComponent {
 
   calculatorForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private energyCalculatorService: EnergyCalculatorService) {
     // Initialize the form with FormBuilder
     this.calculatorForm = this.fb.group({
-      relativeCompactness: [1.368],
-      overallHeight: [1.368],
-      surfaceArea: [1.368],
-      wallArea: [1.368],
-      roof: [1.368],
-      glazingArea: [1.368],
-      glazingAreaDistribution: [1.368],
-      orientation: ['Dropdown']
+      x1: [1.368],
+      x2: [1.368],
+      x3: [1.368],
+      x4: [1.368],
+      x5: [1.368],
+      x6: [1.368],
+      x7: [1.368],
+      x8: ['Dropdown']
     });
   }
   
@@ -33,6 +34,13 @@ export class EnergyCalculatorComponent {
   ];
 
   onSubmit() {
-    console.log('Form Submitted:', this.calculatorForm.value);
+    this.energyCalculatorService.calculateEnergy(this.calculatorForm.value).subscribe({
+      next: response => {
+        console.log('Form Submitted:', response);
+      },
+      error: error => {
+        console.error('Error:', error);
+      }
+    });
   }
 }
