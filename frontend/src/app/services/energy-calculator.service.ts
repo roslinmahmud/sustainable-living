@@ -12,6 +12,6 @@ export class EnergyCalculatorService {
   constructor(private http: HttpClient) { }
 
   calculateEnergy(data: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, data);
+    return this.http.post<any>(this.apiUrl, [data]);
   }
 }
