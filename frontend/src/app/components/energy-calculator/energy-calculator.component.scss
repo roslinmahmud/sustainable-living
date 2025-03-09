@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  /* Calculator Section */
+  .calculator-section {
+    padding: 40px;
+    text-align: center;
+    background: #f9f9f9;
+  }
+  
+  .calculator-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .calculator-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #00c4ff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .submit-btn:hover {
+    background: #00b0e6;
+  }
+  
+  /* Footer Section */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #fff;
+    border-top: 1px solid #ccc;
+  }
+  
+  .language-select {
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .footer-center p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .footer-right img {
+    width: 20px;
+    margin-left: 10px;
+  }
+  
+  .made-with {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .made-with span {
+    color: #ff4081;
+  }

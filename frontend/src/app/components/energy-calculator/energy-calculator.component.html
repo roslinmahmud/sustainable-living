@@ -1,0 +1,45 @@
+<!-- Calculator Section -->
+<div class="calculator-section">
+  <h2>ENERGY EFFICIENCY CALCULATOR</h2>
+  <form [formGroup]="calculatorForm" (ngSubmit)="onSubmit()" class="calculator-form">
+    <div class="form-group">
+    <label>Relative Compactness</label>
+    <input type="number" formControlName="X1" />
+    </div>
+    <div class="form-group">
+    <label>Overall Height (meter)</label>
+    <input type="number" formControlName="X2" />
+    </div>
+    <div class="form-group">
+    <label>Surface Area (m2)</label>
+    <input type="number" formControlName="X3" />
+    </div>
+    <div class="form-group">
+    <label>Wall Area (m2)</label>
+    <input type="number" formControlName="X4" />
+    </div>
+    <div class="form-group">
+    <label>Roof (m2)</label>
+    <input type="number" formControlName="X5" />
+    </div>
+    <div class="form-group">
+    <label>Glazing Area (m2)</label>
+    <input type="number" formControlName="X6" />
+    </div>
+    <div class="form-group">
+    <label>Glazing Area Distribution</label>
+    <input type="number" formControlName="X7" />
+    </div>
+    <div class="form-group">
+    <label>Orientation</label>
+    <select formControlName="X8">
+      <option [ngValue]="0">Dropdown</option>
+      <option [ngValue]="2">North (Value 2)</option>
+      <option [ngValue]="3">South (Value 3)</option>
+      <option [ngValue]="4">East (Value 4)</option>
+      <option [ngValue]="5">West (Value 5)</option>
+    </select>
+    </div>
+    <button type="submit" class="submit-btn">SUBMIT</button>
+  </form>
+  </div>
