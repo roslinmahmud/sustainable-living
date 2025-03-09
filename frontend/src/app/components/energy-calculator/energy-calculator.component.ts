@@ -15,23 +15,17 @@ export class EnergyCalculatorComponent {
   constructor(private fb: FormBuilder, private energyCalculatorService: EnergyCalculatorService) {
     // Initialize the form with FormBuilder
     this.calculatorForm = this.fb.group({
-      x1: [1.368],
-      x2: [1.368],
-      x3: [1.368],
-      x4: [1.368],
-      x5: [1.368],
-      x6: [1.368],
-      x7: [1.368],
-      x8: ['Dropdown']
+      X1: [1.368],
+      X2: [1.368],
+      X3: [1.368],
+      X4: [1.368],
+      X5: [1.368],
+      X6: [1.368],
+      X7: [1.368],
+      X8: [0]
     });
   }
-  
-  orientationOptions = [
-    { label: 'North (Value 2)', value: 2 },
-    { label: 'South (Value 3)', value: 3 },
-    { label: 'East (Value 4)', value: 4 },
-    { label: 'West (Value 5)', value: 5 }
-  ];
+
 
   onSubmit() {
     this.energyCalculatorService.calculateEnergy(this.calculatorForm.value).subscribe({
