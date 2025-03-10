@@ -5,12 +5,30 @@ Below is the architecture flow of the project:
 
 The architecture ensures efficient model management, API-based prediction serving, and a user-friendly UI for interactions.
 
+## Installation
+
+**Install dependencies**:
+   Run the following command to install all dependencies required by your project:
+   ```bash
+    cd backend
+    pip install -r requirements.txt
+```
+
+## Preparation of Environment
+
+Before running your project, ensure you have the necessary environment variables set up:
+
+**Activate a virtual environment (optional)**:
+   To avoid polluting the system Python environment, consider activating a virtual environment using `python -m venv myenv` and then activating it with `myenv\Scripts\activate` on Windows or `source myenv/bin/activate` on macOS/Linux.
+
+
+
 ## **Running the Project**
 
 ### Running MLflow
-1. Install MLflow:
+1. Navigate to the MLflow  directory:
     ```bash
-    pip install mlflow
+    cd backend/mlflow
     ```
 2. Start the MLflow server:
     ```bash
@@ -18,11 +36,7 @@ The architecture ensures efficient model management, API-based prediction servin
     ```
 
 ### Running FastAPI
-1. Install FastAPI and Uvicorn:
-    ```bash
-    pip install fastapi uvicorn
-    ```
-2. Start the FastAPI server:
+- Start the FastAPI server:
     ```bash
     uvicorn main:app --host 0.0.0.0 --port 8000
     ```
@@ -38,7 +52,7 @@ The architecture ensures efficient model management, API-based prediction servin
     ```
 3. Start the Angular development server:
     ```bash
-    ng serve --host 0.0.0.0 --port 4200
+    ng serve
     ```
 
 Now you should have MLflow running on port 5000, FastAPI on port 8000, and the Angular app on port 4200.
