@@ -1,5 +1,33 @@
-<div *ngIf="result">
-    <h3>Energy Calculation Result</h3>
-    <p>Heating Load (Y1): {{ result.Heating_Load_Y1 }}</p>
-    <p>Cooling Load (Y2): {{ result.Cooling_Load_Y2 }}</p>
-</div>
+<div class="results-section">
+    <h2>Heating and Cooling Load Display</h2>
+    <div class="load-display" *ngIf="results; else loading">
+      <div class="load-item">
+        <h3>Heating Load <span>(kWh)</span></h3>
+        <p>{{ result.heatingLoad }}</p>
+      </div>
+      <div class="load-item">
+        <h3>Cooling Load <span>(kWh)</span></h3>
+        <p>{{ result.coolingLoad }}</p>
+      </div>
+    </div>
+    <ng-template #loading>
+      <p>Loading results...</p>
+    </ng-template>
+  
+    <h2>Estimated Energy Costs</h2>
+    <p class="formula">
+      TOTAL ENERGY COST (€) = (Heating Load/Cooling Load) × ELECTRICITY PRICE (€/kWh)
+    </p>
+    <div class="cost-display" *ngIf="results">
+      <div class="cost-item">
+        <h3>Estimated Cost Heating</h3>
+        <p>{{ result.heatingCost }} EURO</p>
+      </div>
+      <div class="cost-item">
+        <h3>Estimated Cost Cooling</h3>
+        <p>{{ result.coolingCost }} EURO</p>
+      </div>
+    </div>
+  
+    <button class="back-btn" routerLink="/calculator">Back to Calculator</button>
+  </div>
