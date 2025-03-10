@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { EnergyCalculatorService } from '../../services/energy-calculator.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-energy-calculator',
@@ -12,7 +13,9 @@ export class EnergyCalculatorComponent {
 
   calculatorForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private energyCalculatorService: EnergyCalculatorService) {
+  constructor(private fb: FormBuilder, 
+    private energyCalculatorService: EnergyCalculatorService,
+    private router: Router) {
     // Initialize the form with FormBuilder
     this.calculatorForm = this.fb.group({
       X1: [1.368],
@@ -31,6 +34,7 @@ export class EnergyCalculatorComponent {
     this.energyCalculatorService.calculateEnergy(this.calculatorForm.value).subscribe({
       next: response => {
         console.log('Form Submitted:', response);
+        this.router.navigate(['/result'], { state: { result: response } });
       },
       error: error => {
         console.error('Error:', error);

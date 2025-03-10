@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { EnergyCalculatorComponent } from './components/energy-calculator/energy-calculator.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { EnergyResultComponent } from './components/energy-result/energy-result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EnergyCalculatorComponent
+    EnergyCalculatorComponent,
+    EnergyResultComponent
   ],
   imports: [
     BrowserModule,
