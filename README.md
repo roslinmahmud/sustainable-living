@@ -5,6 +5,14 @@ Below is the architecture flow of the project:
 
 The architecture ensures efficient model management, API-based prediction serving, and a user-friendly UI for interactions.
 
+## Preparation of Environment
+
+Before running your project, ensure you have the necessary environment variables set up:
+
+**Activate a virtual environment (optional)**:
+   To avoid polluting the system Python environment, consider activating a virtual environment using `python -m venv venv` and then activating it with `myenv\Scripts\activate` on Windows or `source venv/bin/activate` on macOS/Linux.
+
+
 ## Installation
 
 **Install dependencies**:
@@ -13,14 +21,6 @@ The architecture ensures efficient model management, API-based prediction servin
     cd backend
     pip install -r requirements.txt
 ```
-
-## Preparation of Environment
-
-Before running your project, ensure you have the necessary environment variables set up:
-
-**Activate a virtual environment (optional)**:
-   To avoid polluting the system Python environment, consider activating a virtual environment using `python -m venv myenv` and then activating it with `myenv\Scripts\activate` on Windows or `source myenv/bin/activate` on macOS/Linux.
-
 
 
 ## **Running the Project**
