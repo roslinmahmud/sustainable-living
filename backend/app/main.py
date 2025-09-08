@@ -9,7 +9,7 @@ from starlette.middleware.cors import CORSMiddleware
 from app.models import BuildingFeatures, PredictionResponse
 
 mlflow.set_tracking_uri("http://127.0.0.1:5000")  # Localhost MLflow server
-model = mlflow.sklearn.load_model(model_uri='models:/RandomForestModel/latest')
+model = mlflow.sklearn.load_model(model_uri='models:/RandomForestModel/latest') # Update the model name after experimenting
 
 app = FastAPI()
 
